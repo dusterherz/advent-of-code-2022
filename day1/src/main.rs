@@ -19,15 +19,12 @@ fn main() {
     });
     all_elves.sort();
     all_elves.reverse();
+    let first_elf: i32 = all_elves[0];
+    let three_first_elves: i32 = all_elves[0..3].iter().sum();
 
-    println!(
-        "The most calories for each elves is: {:?}",
-        all_elves.get(0).expect("No elves found")
-    );
+    println!("The most calories for each elves is: {:?}", first_elf);
     println!(
         "The most calories for 3 first elves is: {:?}",
-        all_elves.get(0).expect("No elves found")
-            + all_elves.get(1).expect("Elf 2 not found")
-            + all_elves.get(2).expect("Elf 3 not found")
+        three_first_elves
     );
 }
